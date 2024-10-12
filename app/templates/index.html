@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Jobs - Home</title>
+</head>
+<body>
+    <h1>Find Remote Jobs</h1>
+    <form action="" method="POST">
+        <input type="text" name="search" placeholder="Search Jobs">
+    </form>
+    
+    <h2>Job Listings</h2>
+    <ul>
+        {% for job in jobs %}
+        <li>
+            <a href="/job/{{ job.id }}">{{ job.title }}</a> - {{ job.company }} ({{ job.location }})
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
